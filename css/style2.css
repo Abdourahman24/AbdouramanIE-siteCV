@@ -1,0 +1,226 @@
+*{
+    padding:10;
+    margin: 10;
+}
+body{
+    font-family: sans-serif;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Styles pour les petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Réduisez la taille de la police pour les petits écrans */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .fs-5 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    #icon {
+        font-size: 3em; /* Réduisez la taille de l'icône pour les écrans plus petits */
+    }
+}
+
+@media (max-width: 480px) {
+    #icon {
+        font-size: 2em; /* Réduisez davantage la taille de l'icône pour les écrans très petits */
+    }
+}
+
+
+/* Styles pour les écrans encore plus petits (max-width: 576px) */
+@media (max-width: 576px) {
+    /* Ajustez la taille du logo sur les petits écrans */
+    .navbar-brand {
+        font-size: 24px;
+    }
+}
+/* Style pour la section de l'image de fond */
+.cover-image {
+    background-image: url(''); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh; /* Hauteur de l'écran */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Pour s'assurer que l'image est au-dessus des autres éléments */
+    transition: opacity 1s; /* Effet de fondu */
+}
+
+/* Style pour masquer progressivement l'image */
+header {
+    background-color: black;
+    padding: 40px 0; /* Ajoutez de la marge intérieure pour plus d'espace autour du contenu */
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.logo {
+    width: 400px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Styles for the introduction section */
+#accueil {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #d82c2e;/* Fond rouge en cas de non-chargement de l'image */
+    color: white; /* Couleur du texte en blanc */
+    padding: 100px 0;
+}
+
+#name-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#post-title {
+    font-size: 20px;
+    color: #666;
+}
+.white-text {
+    color: white;
+}
+
+/* Styles pour l'animation de texte */
+.txt-rotate {
+    display: inline-block;
+}
+
+/* Styles pour le texte qui change */
+.txt-rotate::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: red; /* Couleur du trait en dessous du texte */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0); /* Le trait est invisible au départ */
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation du trait au survol */
+.txt-rotate:hover::before {
+    transform: scaleX(1); /* Le trait s'affiche au survol */
+    transform-origin: left;
+}
+
+/* Styles for the about section */
+#about-section {
+    padding: 100px 0;
+}
+
+#about-image {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the compétences section */
+#compétences {
+    background-color: red; /* Fond rouge */
+    color: white; /* Couleur du texte en blanc */
+    padding: 100px 0;
+}
+
+/* Center content vertically */
+#formation .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: #d82c2e;
+    margin: 0 auto 20px;
+}
+#icon {
+    font-size: 5em;
+}
+/* Scroll reveal animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Global styles */
+
+footer {
+    padding-top: 25px;
+    background-color: black;
+    color: whitesmoke;
+   
+}
+
+/* Add other specific styles here */
